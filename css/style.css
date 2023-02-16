@@ -1,0 +1,140 @@
+/*font-family: 'Fenix', serif;
+font-family: 'Raleway', sans-serif;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Fenix', serif;
+}
+a{
+    text-decoration: none;
+}
+
+h1, h2{
+    color: whitesmoke;
+    font-family: 'Fenix', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+li{
+    color: white;
+}
+
+.div p:nth-child(1){
+    color: white;
+    width: 250px;
+}
+
+.div p:nth-child(2){
+    color: wheat;
+    width: 250px;
+    display: flex;
+}
+
+.div p:nth-child(3){
+    color: whitesmoke;
+    width: 250px;
+}
+
+.div{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+p{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+#header_index nav ul{
+   list-style: none;
+   gap: 30px;
+}
+
+#header_index nav, ul, li a{
+    font-size: 20px;
+    color: palevioletred;
+    font-family:  'Fenix', serif;
+    padding: 4px 10px;
+    
+}
+
+#header_index nav, ul, li a{
+    color: white;
+    font-family:  'Fenix', serif;
+    font-weight: 100;
+}
+
+#header_index nav, ul, li, a:hover{
+    color: #08b7d4;
+}
+
+.logo img{
+    display: block;
+    height: 100%;
+ }
+ 
+#heard-index nav, ul{
+    display: flex;
+}
+
+#heard-index{
+    display: flex;
+}
+
+.menu-de-navegacion{ 
+    display: flex ;
+    padding: 0%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+main h1, iframe{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+  
+/*------header_index color de fondo botones ver mas-----*/
+.btn{
+    color: white;
+    cursor: pointer;
+    border: 3px solid aqua;
+    padding: 7px 9px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+}
+.btn:hover{
+    background-color: violet;
+}
+
+body{
+    background-image: linear-gradient(135deg
+    ,#7d989c, #5b5b8d, #06103b, #070725, #8575b4, #9c4e96, #522d3a);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+footer a{
+    font-size: 30px;
+    color: aliceblue;
+    margin-right: 10px;
+}
+footer a:hover{
+     color: aqua;
+}
+/*--------------armario--------------*/
