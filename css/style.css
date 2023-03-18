@@ -1,140 +1,682 @@
 /*font-family: 'Fenix', serif;
-font-family: 'Raleway', sans-serif;*/
+font-family: 'Raleway', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:  'Fenix', serif;
 }
-a{
-    text-decoration: none;
+
+.imagen1{
+    width: 75%;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
 }
 
-h1, h2{
-    color: whitesmoke;
+img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
+}
+
+
+/**cajas**/
+
+body{
+    background: white;
+}
+
+main{
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+main h1{
+    text-align: center;
+    font-size: 40px;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgb(104, 219, 204);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+
+
+.container_box{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 218px;
+    height: 200px;
+    background: aquamarine;
+    margin: 1px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -4px rgba(239, 255, 91, 0.966);
+    background: #000000;
+    z-index: 1;
+}
+
+.box i{
+    font-size: 60px;
+    color: #1a1070;
+}
+
+.box:hover i{
+    color: rgb(255, 255, 255);
+}
+
+.box h5{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #5c5c5c;
+    font-family: 'Fenix', serif;
+
+}
+
+.box:hover h5{
+    color: aqua;
+    opacity: 0;
+    font-family: 'Fenix', serif;
+    position: absolute;
+    align-items: center;
+}
+
+.box h4{
+    text-transform: uppercase;
+    font-family: 'Fenix', serif;
+    font-size: 20px;
+    color: aqua;
+    position: absolute;
+    bottom: 50px;
+    filter: blur(5px);
+    opacity: 1;
+    color: transparent
+}
+
+.box:hover h4{
+    font-size: 14px;
+    font-family: 'Fenix', serif;
+    opacity: 1;
+    filter: blur(0px);
+    color: aqua;
+    transition: all 600ms ease;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #ac43ad;
+}
+
+.logo{
+    max-width: 4rem;
+}
+
+.nav-list{
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.nav > .nav-list{
+    height: 100%;
+    display: flex;
+} 
+
+.nav .nav-list li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.nav > .nav-list > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+.nav > .nav-list > li > a:hover{
+    transform: scale(1.1);
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.nav-list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+li a.active, li a:hover{
+    background: rgb(9, 0, 128);
+   transform: scale(1.1); 
+    border-radius: 3px;
+}
+
+/***submenu***/
+
+.nav .nav-list li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: violet;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+.nav .nav-list li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+} 
+
+.nav .nav-list li ul:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid violet;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+.nav .nav-list li ul li a{
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+.nav .nav-list li ul li a:hover{
+    background: #1a1070;
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+/*imagen 4 con efecto*/
+body{
+    background-image: url(../assest/imagenes/fondo10.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*********************************/
+
+
+h2{
+    color: rgb(136, 232, 245);
     font-family: 'Fenix', serif;
     font-weight: 300;
     text-align: center;
 }
 
-li{
-    color: white;
+a{
+    text-decoration: none;
 }
 
-.div p:nth-child(1){
-    color: white;
-    width: 250px;
+header .nav-list, li a{
+    font-family: 'Poppins', sans-serif;
 }
 
-.div p:nth-child(2){
-    color: wheat;
-    width: 250px;
+
+
+.nav .nav-list li:hover .menu-vertical{
+    display: block;
+}
+
+
+/*ELEMNTOS RESPONSIVOS*/
+
+.icon_menu{
+    font-size: 26px;
+    color: rgb(18, 25, 133);
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label_check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/*boton amburguesa*/
+
+@media screen and (max-width: 720px){
+    header{
+        padding: 10px;
+    }
+
+    .logo{
+        width: 200px;
+    }
+
+    li a.active, li a:hover{
+        transform: none;
+    }
+
+    li a.active, li a:hover{
+        background: rgb(38, 0, 128);
+        border-radius: 3px;
+    }
+
+    .nav > .nav-list{
+        flex-direction: column;
+        background-color: #ac43ad;
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav > .nav-list > li > a:hover{
+        transform: scale(1)
+    }
+
+    .nav .nav-list li ul{
+        left: 90px;
+
+    }
+
+    .nav > .nav-list > li:hover ul{
+        top: 50px;
+    }
+
+
+    #lable_check{
+        display: block;
+    }
+
+    .icon_menu{
+        display: flex;
+    }
+
+
+   #check:checked ~ .nav > .nav-list{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+  
+}
+
+
+/*ARMARIO*/
+
+.fondo-img{
+    background-image: url(../assest/imagenes/fondo13.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo{
+    max-width: 4rem;
+}
+
+.portafolio-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.imagenes{
+    padding: 80px 0px;
+    text-align: center;
+    color: rgb(219, 22, 144);
+}
+
+.imagenes{
     display: flex;
+    align-items: center;
+}
+.imagenes img{
+    width: 350px;
 }
 
-.div p:nth-child(3){
-    color: whitesmoke;
-    width: 250px;
+.imagen-1{
+    text-align: left;
+    margin-left: 100px;
 }
 
-.div{
-    display: flex; 
-    flex-wrap: wrap;
+.imagen-1 h3{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.imagen-1 p{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+.imagen-2{
+    text-align: left;
+    margin-right: 100px;
+}
+
+.imagen-2 h3{
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.imagen-2 p{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+.imagen-3{
+    text-align: left;
+    margin-left: 100px;
+}
+
+.imagen-3 h3{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.imagen-3 p{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: #1a1070;
+    color: aliceblue;
+}
+
+@media (max-width:720px){
+.portafolio-container{
+    padding: 0px;
+}
+
+.portafolio-container{
+    margin-top: 800px;
+    font-size: 45px;
+}
+
+.portafolio-container{
+    margin-top: 0px;
+}
+
+header .imagenes{
+    width: 150px;
+}
+
+.portafolio-container{
+    padding: 0px 30px 30px 30px;
+}
+
+.imagenes{
+    flex-direction: column;
+}
+
+.imagenes img{
+    display: none;
+}
+
+.imagen-1{
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+.imagen-2{
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+.imagen-3{
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+}
+
+@media screen and (max-width: 720px){
+    header{
+        padding: 10px;
+    }
+
+    .logo{
+        width: 200px;
+    }
+}
+
+/*VIVOS*/
+
+.info-vivos{
+    text-align: center;
+}
+
+.imagen-defondo{
+    background-image: url(../assest/imagenes/fondo14.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto-info{
+    text-align: center;
+}
+
+iframe{
+    margin-top: 30px;
 }
 
 p{
-    color: white;
+    margin: 40px;
+}
+.texto-info p{
+    color: aqua;
+}
+
+@media screen and (max-width: 720px){
+    header{
+        padding: 10px;
+    }
+
+    .logo{
+        width: 200px;
+    }
+}
+
+
+/*tus compras*/
+
+.container-info{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form{
+    background-color: rgb(115, 45, 180);
+    padding: 3px;
+}
+
+h1{
+    font-size: 2rem;
     font-family: 'Raleway', sans-serif;
+    color: azure;
+    text-align: center;
 }
 
-#header_index nav ul{
-   list-style: none;
-   gap: 30px;
+.container-info{
+    padding: 15px;
+    width: 100%;
 }
 
-#header_index nav, ul, li a{
-    font-size: 20px;
-    color: palevioletred;
-    font-family:  'Fenix', serif;
-    padding: 4px 10px;
-    
+.container-inputs{
+    font-size: 22px;
+    color: #283847;
+    border: solid 1px #fcfcfccc;
+    margin-bottom: 15px;
+    padding: 10px;
 }
 
-#header_index nav, ul, li a{
-    color: white;
-    font-family:  'Fenix', serif;
-    font-weight: 100;
+input [type="text"]{
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-left: 10px;
+    width: 95%;
 }
 
-#header_index nav, ul, li, a:hover{
-    color: #08b7d4;
+input [type="tel"]{
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-left: 10px;
+    width: 95%;
 }
 
-.logo img{
-    display: block;
-    height: 100%;
- }
- 
-#heard-index nav, ul{
-    display: flex;
+input [type="email"]{
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-left: 10px;
+    width: 95%;
 }
 
-#heard-index{
-    display: flex;
+input [type="password"]{
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-left: 10px;
+    width: 95%;
 }
 
-.menu-de-navegacion{ 
-    display: flex ;
-    padding: 0%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.buttom{
+    margin-top: 20px;
 }
-main h1, iframe{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-  
-/*------header_index color de fondo botones ver mas-----*/
-.btn{
-    color: white;
-    cursor: pointer;
-    border: 3px solid aqua;
-    padding: 7px 9px;
+
+input[type="submit"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.4rem;
+    color: antiquewhite;
+    background-color: #ac43ad;
     border-radius: 5px;
-    background-color: transparent;
+}
+
+input[type="submit"]:hover{
+  background-color: #1a1070;
+  font-weight: 700;
+}
+
+p{
+    font-size: 1.4rem;
     font-family: 'Raleway', sans-serif;
-}
-.btn:hover{
-    background-color: violet;
+    text-align: center;
 }
 
-body{
-    background-image: linear-gradient(135deg
-    ,#7d989c, #5b5b8d, #06103b, #070725, #8575b4, #9c4e96, #522d3a);
-    background-size: 500%;
-    animation: fanimado 10s infinite;
-}
+@media screem and (min-width: 720px){
+    .form{
+        margin: auto;
+        width: 510px;
+        margin-top: 50px;
+        padding: 15px;
+        border-radius: 25px;
+    }
 
-@keyframes fanimado{
-    0%{
-        background-position: 0% 50%;
+    .container-inputs{
+        font-size: 19px;
+        padding: 10px;
+        margin-right: 20px;
     }
-    50%{
-        background-position: 100% 50%;
+
+    input[type="text"]{
+        width: 90%;
+        font-size: 19px;
     }
-    100%{
-        background-position: 0% 50%;
+
+    input[type="tel"]{
+        width: 90%;
+        font-size: 19px;
+    }
+
+    input[type="email"]{
+        width: 90%;
+        font-size: 19px;
+    }
+
+    input[type="password"]{
+        width: 90%;
+        font-size: 19px;
+    }
+
+    input[type="submit"]{
+        width: 96%;
+        font-size: 19px;
+    }
+
+    p{
+        font-size: 20px;
+        padding: 0px 15px;
     }
 }
-footer a{
-    font-size: 30px;
-    color: aliceblue;
-    margin-right: 10px;
-}
-footer a:hover{
-     color: aqua;
-}
-/*--------------armario--------------*/
